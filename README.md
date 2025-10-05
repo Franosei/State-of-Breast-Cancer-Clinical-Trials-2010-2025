@@ -6,42 +6,58 @@ breast_cancer_trials/
 │── .env
 │── requirements.txt
 │── README.md
-│── main.py                           # Orchestrates row-by-row enrichment to produce the clean dataset
+│── main.py
 │
-├── taug/                             # TAUG-BrCa source materials (as you noted, at repo root)
+├── taug/
 │
 ├── config/
-│   └── settings.py                   # OPENAI_API_KEY, paths, batch sizes, etc.
+│   └── settings.py
 │
 ├── data/
 │   ├── raw/
-│   │   └── breast_cancer_trials_unique.csv   # input fetched file (already present)
+│   │   └── breast_cancer_trials_unique.csv
 │   ├── interim/
-│   │   └── checkpoints/              # periodic parquet/csv checkpoints during row-by-row processing
+│   │   └── checkpoints/
 │   ├── processed/
-│   │   ├── endpoint_dictionary.json  # canonical endpoints (structured)
-│   │   ├── endpoint_dictionary.csv   # canonical endpoints (tabular)
-│   │   ├── endpoint_synonyms.json    # flat alias map
-│   │   ├── breast_cancer_trials_enhanced.parquet  # FINAL clean dataset (authoritative)
-│   │   └── breast_cancer_trials_enhanced.csv      # FINAL clean dataset (shareable)
+│   │   ├── endpoint_dictionary.json
+│   │   ├── endpoint_dictionary.csv
+│   │   ├── endpoint_synonyms.json
+│   │   ├── breast_cancer_trials_enhanced.parquet
+│   │   └── breast_cancer_trials_enhanced.csv
 │   └── outputs/
-│       └── logs/
-│           └── llm_calls.jsonl       # optional audit trail (NM/EI adjudications, ancillary cues)
+│       ├── logs/
+│       │   └── llm_calls.jsonl
+│       ├── figures/                    # NEW: all plots saved here
+│       └── stats/                      # NEW: plain-text stats per analysis
 │
 ├── retrieval/
-│   └── clinicaltrials_api.py         # unchanged (produces ..._unique.csv)
+│   └── clinicaltrials_api.py
 │
-├── processing/                       # NEW: everything that builds the clean dataset
-│   ├── pipeline.py                   # row-by-row driver (calls the three layers below, in order)
-│   ├── endpoints_layer.py            # Layer A: planned endpoints → 15 binary flags (rules + LLM fallback)
-│   ├── reporting_layer.py            # Layer B: planned vs reported gap + CONSORT 7 flags
-│   └── classify_layer.py             # Layer C: NM/EI/HER2/BRCAm (rules + LLM adjudication)
+├── processing/
+│   ├── pipeline.py
+│   ├── endpoints_layer.py
+│   ├── reporting_layer.py
+│   └── classify_layer.py
 │
-├── llm/
-│   └── openai_client.py              # minimal wrapper (JSON-only, temp=0, retries, caching)
+├── analytics/                         
+│   ├── common.py                       # shared theme + helpers (consistent look)
+│   ├── run_all.py                      # run all seven analyses
+│   ├── 01_momentum.py                  # #1 Momentum & Maturity
+│   ├── 02_endpoints_matrix.py          # #2 Endpoints: planned vs reported
+│   ├── 03_nm_vs_ei.py                  # #3 New medicine vs extension
+│   ├── 04_biomarker_cohorts.py         # #4 HER2 & BRCAm cohorts
+│   ├── 05_consort_quality.py           # #5 CONSORT results quality
+│   ├── 06_geography_access.py          # #6 Access & scaling (sites/countries)
+│   └── 07_priority_shortlists.py       # #7 High-priority follow-up lists
 │
-└── utils/
-    ├── helpers.py                    # text normalize, regex, canonicalization, synonym matchers
-    └── io.py                         # safe read/write; row-complete writes; checkpointing utilities
+└── llm/
+│   └── openai_client.py
+│   └── openai_client.py
+│   └── openai_client.py
+│   └── openai_client.py
+│
+utils/
+  ├── helpers.py
+  └── io.py
 
 ```

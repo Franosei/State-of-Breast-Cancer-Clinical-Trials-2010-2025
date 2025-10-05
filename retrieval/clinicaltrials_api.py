@@ -57,14 +57,9 @@ def _jdump(obj: Any) -> str:
 
 # ---------------- Results extractors (compact, CSV-safe) ----------------
 def _extract_outcome_measures(results: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
-    """
-    Returns a compact list of posted outcomes with group-wise values.
-    Each item: {type, title, timeFrame, unit, paramType, dispersionType, groups: [{title, value, spread, lower, upper}]}
-    """
     om = (results or {}).get("outcomeMeasuresModule") or {}
     measures = om.get("outcomeMeasures") or []
     if not measures:
-        # fallback to legacy keys (rare)
         legacy_primary = (results or {}).get("primaryOutcomes") or []
         legacy_secondary = (results or {}).get("secondaryOutcomes") or []
         merged = []
@@ -76,7 +71,6 @@ def _extract_outcome_measures(results: Dict[str, Any]) -> Optional[List[Dict[str
         return merged or None
 
     out: List[Dict[str, Any]] = []
-    # Build a map for group id -> title for readability
     for m in measures:
         group_title_map = {g.get("id"): (g.get("title") or g.get("id")) for g in (m.get("groups") or [])}
         unit = m.get("unitOfMeasure")
@@ -89,7 +83,6 @@ def _extract_outcome_measures(results: Dict[str, Any]) -> Optional[List[Dict[str
             "dispersionType": m.get("dispersionType"),
             "groups": [],
         }
-        # classes -> categories -> measurements[]
         for cls in (m.get("classes") or []):
             for cat in (cls.get("categories") or []):
                 for meas in (cat.get("measurements") or []):
@@ -204,6 +197,10 @@ def _extract_trial_fields(study: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 
     results = study.get("resultsSection") or {}
 
+    # Determine sponsor class and result flag
+    sponsor_class = (sponsor.get("leadSponsor") or {}).get("class")
+    has_results = bool(results)
+
     # Results (compact, JSON-ready)
     results_outcomes = _extract_outcome_measures(results)
     results_flow = _extract_participant_flow(results)
@@ -217,6 +214,8 @@ def _extract_trial_fields(study: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         "overall_status": status.get("overallStatus"),
         "phase": phase,
         "sponsor": (sponsor.get("leadSponsor") or {}).get("name"),
+        "sponsor_class": sponsor_class,
+        "has_results": has_results,
         "start_date": (status.get("startDateStruct") or {}).get("date"),
         "primary_completion_date": (status.get("primaryCompletionDateStruct") or {}).get("date"),
         "completion_date": (status.get("completionDateStruct") or {}).get("date"),
@@ -224,8 +223,6 @@ def _extract_trial_fields(study: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         "last_update_date": (status.get("lastUpdatePostDateStruct") or {}).get("date"),
         "planned_primary_outcomes": planned_primary,
         "planned_secondary_outcomes": planned_secondary,
-
-        # Results saved as JSON strings; empty string means not available
         "results_outcome_measures": _jdump(results_outcomes),
         "results_participant_flow": _jdump(results_flow),
         "results_baseline": _jdump(results_baseline),
@@ -282,11 +279,6 @@ def fetch_breast_cancer_trials(
     page_size: int = 200,
     save_csv_path: Optional[str] = None,
 ) -> pd.DataFrame:
-    """
-    Fetch ALL breast cancer trials (with and without posted results).
-    Returns ONE DataFrame with one row per trial (unique nct_id).
-    Results are embedded as compact JSON columns for analysis.
-    """
     if not CLINICAL_TRIALS_BASE_URL:
         raise RuntimeError(
             "CLINICAL_TRIALS_BASE_URL is not set. Put it in .env as https://clinicaltrials.gov/api/v2/studies"
@@ -297,7 +289,6 @@ def fetch_breast_cancer_trials(
         save_csv_path = os.path.join(RAW_DATA_DIR, "breast_cancer_trials_unique.csv")
 
     term = "breast cancer"
-
     trials: Dict[str, Dict[str, Any]] = {}
     trial_sites: Dict[str, List[Dict[str, Any]]] = {}
     nct_order: List[str] = []
@@ -337,7 +328,6 @@ def fetch_breast_cancer_trials(
         if not page_token:
             break
 
-    # Build final rows (aggregate sites)
     rows: List[Dict[str, Any]] = []
     for nct_id in nct_order:
         t = trials[nct_id]
@@ -380,12 +370,11 @@ def fetch_breast_cancer_trials(
         rows.append(row)
 
     df = pd.DataFrame(rows)
-    df.to_csv(save_csv_path, index=False)  # persist even if empty
+    df.to_csv(save_csv_path, index=False)
 
     if df.empty:
         return df
 
-    # Year filtering by parsed start_date
     df["start_year"] = pd.to_datetime(df["start_date"], errors="coerce").dt.year
     if start_year is not None:
         df = df[df["start_year"] >= int(start_year)]
