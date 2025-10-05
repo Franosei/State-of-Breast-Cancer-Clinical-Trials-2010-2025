@@ -1,0 +1,37 @@
+{
+  "page_summary": "This page provides an example of a neoadjuvant breast cancer trial where the primary objective is to compare the rate of pathologic complete response (pCR) in the breast at the time of surgery after eight weeks of preoperative treatment. The example demonstrates documentation and data formats in CDISC standards for the representation and analysis of pCR. It also gives a brief description of the use of ADaM datasets in supporting endpoint analysis, but specifies the examples are illustrative rather than definitive standards.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Pathologic Complete Response (pCR)",
+      "synonyms": [
+        "pCR",
+        "Pathologic Response"
+      ],
+      "definition": "Pathologic complete response (pCR) is defined as the absence of invasive cancer in the breast at the time of surgery following neoadjuvant therapy.",
+      "measurement": "Evaluated as pCR in the breast at surgery after eight weeks of neoadjuvant treatment.",
+      "time_window": "At time of surgery (post 8 weeks of neoadjuvant treatment)",
+      "assessment_rule": "pCR status is determined by pathological examination of resection specimen at surgery according to protocol.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS",
+        "RS",
+        "ADSL"
+      ],
+      "cdisc_variables": [
+        "RSTESTCD",
+        "RSTEST",
+        "RSORRES",
+        "RSSTRESC",
+        "RSEVAL",
+        "EPOCH",
+        "VISITNUM",
+        "RSDTC",
+        "RSDY"
+      ],
+      "estimand_notes": "Population: subjects undergoing eight weeks of neoadjuvant therapy prior to surgery; Variable: pCR in the breast; Intercurrent events and summary measure not explicitly detailed.",
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

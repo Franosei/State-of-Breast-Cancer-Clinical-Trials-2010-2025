@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page discusses provisional variables in the context of ADaM datasets for breast cancer studies, focusing on the use of parameter-qualifying variables like PARQUAL to distinguish between sources of assessment (e.g., investigator, central review) without changing the endpoint concept. It details metadata for the ADEVENT dataset variables but does not specify or define concrete clinical endpoints.",
+  "endpoint_candidates": []
+}

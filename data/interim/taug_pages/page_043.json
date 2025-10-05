@@ -1,0 +1,32 @@
+{
+  "page_summary": "This page provides examples of how disease recurrence is tracked and recorded in breast cancer clinical trials using CDISC standards. It details data entries for locations of recurrence identified via CT scans and how these occurrences are documented in the Tumor (TU), Tumor Results (TR), and Response (RS) domains, as well as the use of a Disease Recurrence Indicator variable to capture whether disease recurrence has been identified at specific visits.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Disease Recurrence",
+      "synonyms": [
+        "Disease Recurrence Indicator",
+        "DRCRIND"
+      ],
+      "definition": "The occurance of disease recurrence as identified through protocol-defined response criteria and confirmed via imaging scans.",
+      "measurement": "Indicator (Y/N) of whether disease recurrence has been identified at a specified study visit.",
+      "time_window": null,
+      "assessment_rule": "Assessed by investigator based on imaging results (e.g., CT scan), recorded as 'Y' if recurrence is present and 'N' if not; documented at scheduled assessment visits.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "RS",
+        "TU",
+        "TR"
+      ],
+      "cdisc_variables": [
+        "RSORRES",
+        "RSSTRESC",
+        "RSTESTCD",
+        "RSTEST"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.9
+    }
+  ]
+}

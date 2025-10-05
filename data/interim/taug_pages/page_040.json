@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page provides examples of the SDTM RS domain structure for recording breast cancer response assessments per RECIST 1.1, including variables for target and non-target lesion responses, overall response, and associated visit information. It also describes the process and categories of breast cancer recurrence (local, regional, distant), but does not define formal clinical trial endpoints.",
+  "endpoint_candidates": []
+}

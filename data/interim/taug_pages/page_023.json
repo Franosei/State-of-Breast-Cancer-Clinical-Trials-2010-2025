@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page provides an example of a case report form (CRF) annotated for the collection of prior and on-study antineoplastic radiotherapy data in breast cancer trials. It details SDTM (and CDASH) variable mapping for capturing information such as type, intent, setting, modality, and anatomical location of radiation therapy. The page is focused on data collection structure and standards implementation, rather than specific clinical trial endpoints.",
+  "endpoint_candidates": []
+}

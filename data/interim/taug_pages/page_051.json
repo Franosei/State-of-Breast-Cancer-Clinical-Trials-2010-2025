@@ -1,0 +1,55 @@
+{
+  "page_summary": "This page provides example table shells for the categorical analysis of tumor response and analysis of time to progression in breast cancer trials. It outlines the types of responses (CR, PR, SD, PD, UNK), overall response rates, and includes details for analyses such as percentiles, hazard ratios, and censoring for time to progression, serving as examples of efficacy data presentations.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Objective Response Rate",
+      "synonyms": [
+        "Overall Response",
+        "CR+PR",
+        "Objective Response Rate (ORR)"
+      ],
+      "definition": "Proportion of subjects who have a best overall response of complete response (CR) or partial response (PR) as determined by a central imaging center.",
+      "measurement": "Number of subjects with CR or PR divided by the number of subjects with at least one measurable lesion at baseline.",
+      "time_window": null,
+      "assessment_rule": "Best response across all assessments; 95% confidence interval estimated using exact binomial distribution.",
+      "population": "Subjects with at least one measurable lesion at baseline.",
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAMCD",
+        "PARAM"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.95
+    },
+    {
+      "endpoint_name": "Time to Progression",
+      "synonyms": [
+        "TTP",
+        "Radiological Progression"
+      ],
+      "definition": "Time from a defined starting point (likely randomization or treatment initiation) to documented radiological disease progression.",
+      "measurement": "Time from baseline to radiological progression; censored at last assessment for subjects who withdraw, have protocol violations, or other non-progression reasons.",
+      "time_window": null,
+      "assessment_rule": "Subjects are censored if they withdraw due to adverse events or protocol violation; events are radiological progression dates.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD",
+        "PARAM"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.95
+    }
+  ]
+}

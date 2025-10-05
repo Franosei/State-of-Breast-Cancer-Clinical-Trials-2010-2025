@@ -1,0 +1,30 @@
+{
+  "page_summary": "This page discusses derivation considerations for time-to-event endpoints in breast cancer trials, focusing primarily on overall survival (OS) and outlining censoring rules, start date definitions, and the use of separate parameters for sensitivity analyses, particularly in the context of primary and sensitivity analyses for progression-free survival (PFS) as well as typical data source and endpoint event definitions.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Overall Survival",
+      "synonyms": [
+        "OS"
+      ],
+      "definition": "Overall survival is defined as the time from the date of randomization (in randomized trials) or first dose (in non-randomized trials) until death from any cause.",
+      "measurement": "Time from randomization or first dose to death from any cause.",
+      "time_window": null,
+      "assessment_rule": "Subjects alive or lost to follow up at analysis are censored at last known alive date; if an analysis cutoff date is used, deaths after cutoff are censored at cutoff date.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE",
+        "ADSL"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAM",
+        "PARAMCD"
+      ],
+      "estimand_notes": "Discussion covers population definition by trial type, variable (time to death), and handling of intercurrent events (censoring at last known alive or cutoff date).",
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

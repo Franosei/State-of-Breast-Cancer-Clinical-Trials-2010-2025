@@ -1,0 +1,85 @@
+{
+  "page_summary": "This page provides guidance on the use of specific variables (such as CNSR, EVNTDESC, SRCDOM, SRCVAR, SRCSEQ) in the context of time-to-event endpoints in breast cancer studies, with examples involving endpoints like Duration of Response (DOR), Progression-Free Survival (PFS), and Overall Survival (OS). It describes censoring rules, event description conventions, and the use of the ADTTE dataset, referencing how these variables are populated depending on the data source and event capture method.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Duration of Response",
+      "synonyms": [
+        "DOR"
+      ],
+      "definition": "The time from first documented evidence of a response (CR or PR) until disease progression or death.",
+      "measurement": "Duration in days from initial best response to disease progression or death; if no progression, censored at last assessment.",
+      "time_window": null,
+      "assessment_rule": "If after achieving best response the disease does not progress, the subject is censored (CNSR=1); otherwise, not censored (CNSR=0).",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "PARAMCD",
+        "CNSR",
+        "AVAL",
+        "SRCSEQ",
+        "SRCDOM",
+        "SRCVAR"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.95
+    },
+    {
+      "endpoint_name": "Progression-Free Survival",
+      "synonyms": [
+        "PFS"
+      ],
+      "definition": "The time from randomization to the first documented disease progression or death from any cause.",
+      "measurement": "Time (in days) from randomization to documented progression or death.",
+      "time_window": null,
+      "assessment_rule": "If event occurs (CNSR=0), EVNTDESC='DOCUMENTED PROGRESSION'. If censored (CNSR=1), EVNTDESC='CENSORED AT TIME OF LAST ASSESSMENT'.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "PARAMCD",
+        "CNSR",
+        "AVAL",
+        "EVNTDESC",
+        "SRCSEQ",
+        "SRCDOM",
+        "SRCVAR"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.9
+    },
+    {
+      "endpoint_name": "Overall Survival",
+      "synonyms": [
+        "OS"
+      ],
+      "definition": "The time from randomization until death from any cause.",
+      "measurement": "Time (in days) from randomization to death.",
+      "time_window": null,
+      "assessment_rule": "If event occurs (CNSR=0), EVNTDESC='DEATH'. If censored (CNSR=1), EVNTDESC='CENSORED AT TIME OF LAST ASSESSMENT'.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "PARAMCD",
+        "CNSR",
+        "AVAL",
+        "EVNTDESC",
+        "SRCSEQ",
+        "SRCDOM",
+        "SRCVAR"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.85
+    }
+  ]
+}

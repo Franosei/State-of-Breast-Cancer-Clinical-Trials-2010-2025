@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page describes pathology data standards for breast cancer, specifically detailing scoring methods for estrogen receptor (ER) expression in tissue samples. It outlines how to represent and record various ER assessment metrics—including percent positive cells, proportion score, intensity score, and total score—in CDISC SDTM MI domain datasets. The page also provides a brief definition of tubular breast cancer and explains metadata considerations for point scales used in scoring, but does not define or discuss any clinical endpoints.",
+  "endpoint_candidates": []
+}

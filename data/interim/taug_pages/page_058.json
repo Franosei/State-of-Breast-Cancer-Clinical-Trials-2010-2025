@@ -1,0 +1,34 @@
+{
+  "page_summary": "This page provides information about variable definitions and coding conventions in CDISC datasets relevant to breast cancer studies, focusing specifically on variables used to represent the 'Best Overall Response' (BOR) parameter in analysis datasets. It details the possible qualifiers for assessment sources, the response ranking, and how analysis values are mapped from categorical clinical response terms. The page includes examples of variables such as PARAM, PARAMCD, AVAL, and AVALC as applied to BOR assessments.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Best Overall Response",
+      "synonyms": [
+        "BOR",
+        "Best response"
+      ],
+      "definition": "Best Overall Response is the best result achieved by a subject across all assessment timepoints, typically ranked according to standard response categories such as complete response, partial response, stable disease, or progressive disease.",
+      "measurement": "Determined as the best recorded response (e.g., CR, PR, SD, PD) for each subject over the study period.",
+      "time_window": null,
+      "assessment_rule": "Response is ranked and mapped numerically (CR=1, PR=2, SD=3, PD=4) based on categorical results from sources such as investigator, central, or pathologic assessments; the best (lowest) value observed determines BOR.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "PARAM",
+        "PARAMCD",
+        "AVAL",
+        "AVALC",
+        "PARQUAL",
+        "SRCDOM",
+        "SRCVAR",
+        "SRCSEQ"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

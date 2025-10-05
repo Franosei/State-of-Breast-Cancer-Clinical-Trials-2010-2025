@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page discusses the use of the ADaM model to create analysis datasets for breast cancer trials, emphasizing the importance of traceability, mock table shells, and describing subject-level analysis datasets (ADSL) with variables relevant for inclusion in typical BrCa studies. It provides illustrative metadata examples for variables such as cancer stage, histopathology, and prior treatment end date, but does not define or detail specific analysis endpoints.",
+  "endpoint_candidates": []
+}

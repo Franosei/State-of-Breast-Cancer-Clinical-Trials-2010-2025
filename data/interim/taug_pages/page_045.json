@@ -1,0 +1,29 @@
+{
+  "page_summary": "This page introduces analysis endpoints commonly used in breast cancer clinical trials, providing an overview of their classification into time-to-event and response endpoints. It details how these endpoints, especially time-to-event endpoints like progression-free survival (PFS), are defined, measured, and censored within clinical trials. The page also references relevant CDISC ADaM documentation and notes that full definitions and methodology for censoring and endpoint derivation are further discussed in subsequent sections.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Progression-Free Survival",
+      "synonyms": [
+        "PFS"
+      ],
+      "definition": "The length of time until disease progression or death from any cause, whichever occurs first.",
+      "measurement": "Time from start of observation period (often randomization) to the date of progression as defined by RECIST PD or to death from any cause.",
+      "time_window": null,
+      "assessment_rule": "For patients without a PFS event, censor at the last adequate assessment per protocol; an accompanying categorical censoring variable (e.g., 0=event, ≥1=censored) is required. Event occurs at progression or death. Censoring rules and assessment schedule should be protocol-defined.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD",
+        "PARAM"
+      ],
+      "estimand_notes": "Describes population (all trial patients assessed for PFS), variable (time to event or censor), and references censoring rules; does not detail intercurrent event handling or summary measure.",
+      "quality_flags": null,
+      "confidence": 0.98
+    }
+  ]
+}

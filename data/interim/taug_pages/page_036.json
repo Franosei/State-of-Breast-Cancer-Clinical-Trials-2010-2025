@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page from the CDISC Breast Cancer User Guide provides data standard details about capturing the date of symptomatic deterioration, referencing the 'SYMPTDAT' variable and its associated date field. The page also notes the controlled terminology regarding 'NON-CR/NON-PD' status, but does not define specific clinical trial endpoints or provide endpoint measurement rules.",
+  "endpoint_candidates": []
+}

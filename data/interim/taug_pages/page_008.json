@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page discusses data modeling challenges in breast cancer studies, specifically the handling of 'inevaluable' tumor assessments and the use of the PARQUAL variable in ADaM datasets, as well as providing an overview of breast cancer epidemiology and the typical data collected across various clinical settings (neoadjuvant, adjuvant, advanced). It mentions the connection between certain data types (e.g., pathology data) and endpoints such as complete pathologic response (pCR) depending on treatment setting but does not provide concrete definitions or details for any specific endpoint.",
+  "endpoint_candidates": []
+}

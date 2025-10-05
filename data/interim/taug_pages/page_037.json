@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page provides examples of how tumor identification through imaging procedures at screening are captured in CDISC data domains for breast cancer studies. It details how imaging events (such as chest X-rays and CT scans) are represented in the Procedure (PR) domain, and how findings from these images, specifically tumor identifications, are logged in the Tumor Identification (TU) domain. The example also distinguishes between target and non-target lesions and clarifies RECIST considerations for non-solid findings like pleural effusion. No concrete efficacy or response endpoints are defined or discussed on this page.",
+  "endpoint_candidates": []
+}

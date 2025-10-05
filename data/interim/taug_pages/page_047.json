@@ -1,0 +1,30 @@
+{
+  "page_summary": "This page discusses methodological considerations and potential biases in the derivation, censoring, and analysis of endpoints such as progression-free survival (PFS) in breast cancer trials, including issues arising from intervention-dependent censoring, missing or unscheduled assessments, and the need for sensitivity analyses. It highlights informative censoring due to clinical progression not captured radiologically, the impact of new therapies begun before progression, and the need for alternative analytical strategies to handle such complexities. It also addresses how missing or unscheduled assessments can bias PFS estimates and describes various censoring or imputation rules that could be applied to cope with missing data.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Progression-Free Survival",
+      "synonyms": [
+        "PFS",
+        "radiologic PFS"
+      ],
+      "definition": "Progression-Free Survival (PFS) is the time from a defined starting point (often randomization) until objective tumor progression or death from any cause, whichever occurs first.",
+      "measurement": "Time from study entry or randomization to first documented progression (often per RECIST) or death.",
+      "time_window": null,
+      "assessment_rule": "Censoring occurs at the last non-PD assessment prior to informative events like withdrawal for clinical progression, alternative therapy, or missing assessments. Sensitivity analyses may use imputation, handle new therapy as an event, or assign progression at next scheduled visit after missing visits. Unscheduled PDs may be assigned to the next scheduled assessment.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE",
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD"
+      ],
+      "estimand_notes": "Population includes patients at risk for progression; handling of intercurrent events (such as alternative therapy or missing visits) may affect the estimand. Sensitivity analyses and multiple censoring rules highlight concerns over intercurrent events and treatment policy strategies.",
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

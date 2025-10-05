@@ -1,0 +1,32 @@
+{
+  "page_summary": "This page discusses the derivation considerations for progression-free survival (PFS) in breast cancer clinical trials. It details how observation periods are defined, the rules for determining the date of progression and censoring, and the typical scenarios that influence these determinations, including specific censoring rules and interventions that may affect event classification.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Progression-Free Survival",
+      "synonyms": [
+        "PFS"
+      ],
+      "definition": "PFS assesses the time from a starting event (such as randomization or therapy start) until disease progression or death from any cause.",
+      "measurement": "Time from randomization (in randomized studies) or therapy initiation (non-randomized studies) to documented radiologic disease progression or death, whichever occurs first.",
+      "time_window": null,
+      "assessment_rule": "Progression date is derived as the earliest scan or evaluation date indicating PD per RECIST criteria. Censoring rules apply: patients starting new anti-cancer therapy before progression/death are censored at the last radiological assessment prior to new therapy; patients without PD or death are censored at last radiological assessment; those with PD/death after missing two or more scheduled assessments are censored at the last adequate assessment; those with no baseline/post-baseline assessment are censored at Day 1 unless they die within <n> days, in which case death counts as the event at the date of death. Analysis cutoff dates also determine available data.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE",
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD",
+        "PARAM",
+        "ADT",
+        "ADTM"
+      ],
+      "estimand_notes": "Discussion of population definition based on randomization or treatment start, use of censoring rules (intercurrent events), and specification of analysis cut-off date.",
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

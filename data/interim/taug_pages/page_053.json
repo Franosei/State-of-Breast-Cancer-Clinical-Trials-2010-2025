@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page describes breast cancer-specific baseline variables captured at randomization, such as HER2 status, estrogen receptor status, and visceral disease status. It explains the concept of an 'event dataset' to support the derivation of time-to-event analysis endpoints, highlighting the traceability of events, the impact of different assessment methodologies, and the use of analysis flags to identify which events contribute to time-to-event analyses. No specific endpoint is formally defined or described in detail on this page.",
+  "endpoint_candidates": []
+}

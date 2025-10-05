@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page describes metadata standards and SDTM modeling practices for the recording and identification of tumor and lesion data in metastatic breast cancer trials, including the use of the non-standard variable PRTYP (Tumor or Lesion Presentation Type) to differentiate non-measurable lesions such as effusions, and the relationship between procedure (PR) and tumor (TU) domains for tracking imaging sources and lesion characteristics.",
+  "endpoint_candidates": []
+}

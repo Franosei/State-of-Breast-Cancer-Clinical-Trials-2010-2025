@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page provides examples and metadata for recording treatment administration (especially various types of radiation therapy schedules) in breast cancer studies using CDISC standards. It also briefly discusses the relevance of capturing treatment side effects, particularly dose-limiting toxicities and potential cardiotoxicity related to specific agents, but notes that the detailed analysis of adverse events is beyond the scope of this TAUG version.",
+  "endpoint_candidates": []
+}

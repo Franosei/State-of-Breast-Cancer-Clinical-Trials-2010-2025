@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page provides a detailed example of data modeling for a lumpectomy case in breast cancer, illustrating how tumor identification, tumor measurements, and surgical margin status are recorded in SDTM domains (TU, TR, MI) and interconnected via linked identifiers. The example showcases data collection and linkage for a subject whose tumor was identified as malignant, measured pathologically, and demonstrated to have negative surgical margins after surgery.",
+  "endpoint_candidates": []
+}

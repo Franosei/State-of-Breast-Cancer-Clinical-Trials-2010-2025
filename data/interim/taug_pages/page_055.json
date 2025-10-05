@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page details variable definitions and data structure guidelines for breast cancer time-to-event analyses, focusing on mapping source events, assessment types, and handling protocol violations and censoring. It includes an example dataset structure for recording assessment dates, event types, assessment flags, and source tracing for data derivation, but does not explicitly define or describe concrete clinical endpoints.",
+  "endpoint_candidates": []
+}

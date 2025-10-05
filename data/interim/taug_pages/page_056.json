@@ -1,0 +1,78 @@
+{
+  "page_summary": "This page provides metadata definitions for variables used in the analysis of breast cancer efficacy endpoints within an ADaM time-to-event dataset (ADTTE), including specifications for variables such as PARAM, PARAMCD, AVAL, and CNSR. It discusses different sources of assessment, the derivation logic for analysis values, and censoring criteria for endpoints like Progression-Free Survival, Overall Survival, and Duration of Response.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Progression-Free Survival",
+      "synonyms": [
+        "PFS"
+      ],
+      "definition": "Time from a reference start date to the date of disease progression or death from any cause.",
+      "measurement": "Time from reference start date to disease progression or censoring if progression does not occur.",
+      "time_window": null,
+      "assessment_rule": "Use ADVENT.ASTDY when ADEVENT.ANL01FL = 'Y' and ADEVENT.PARAMCD = 'ASSESS' and disease progressed. If disease did not progress, then CNSR = 1.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "PARAMCD",
+        "AVAL",
+        "CNSR",
+        "ASTDY",
+        "ANL01FL"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 1.0
+    },
+    {
+      "endpoint_name": "Overall Survival",
+      "synonyms": [
+        "OS"
+      ],
+      "definition": "Time from a reference start date to death from any cause.",
+      "measurement": "Time from reference start date to death or censoring if subject did not die.",
+      "time_window": null,
+      "assessment_rule": "Use ADVENT.ASTDY when ADEVENT.ANL01FL = 'Y' and ADEVENT.PARAMCD = 'EVENT' and ADEVENT.AVALC = 'DEATH' or when ADEVENT.ANL01FL = 'Y' and ADEVENT.PARAMCD = 'DISPOSIT' and maximum ADEVENT.ASTDY. If subject did not die, then CNSR = 1.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "PARAMCD",
+        "AVAL",
+        "CNSR",
+        "ASTDY",
+        "ANL01FL",
+        "AVALC"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 1.0
+    },
+    {
+      "endpoint_name": "Duration of Response",
+      "synonyms": [
+        "DOR"
+      ],
+      "definition": "Time from the best response to disease progression.",
+      "measurement": "Time from best response until progression.",
+      "time_window": null,
+      "assessment_rule": null,
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "PARAMCD",
+        "AVAL"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.9
+    }
+  ]
+}

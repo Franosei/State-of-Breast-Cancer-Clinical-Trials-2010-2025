@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page is an appendix listing various non-standard variables (NSVs) used in the CDISC TAUG for breast cancer, describing each variable's parent domain, type, and intended use. The variables include reasons for treatment discontinuation, treatment intent, best overall response to prior treatments, details about treatment location, dose, and others, but are not presented as efficacy or safety endpoints. The content serves as metadata and variable documentation rather than defining or discussing clinical trial endpoints.",
+  "endpoint_candidates": []
+}

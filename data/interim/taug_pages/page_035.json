@@ -1,0 +1,141 @@
+{
+  "page_summary": "This page provides an annotated Case Report Form (CRF) mapping for breast cancer disease response, detailing SDTM variables used to capture overall, target, non-target, and best overall responses as well as symptomatic deterioration under RECIST 1.1 criteria. The form outlines assessment options, possible responses (CR, PR, SD, PD, etc.), evaluators, and associated dates, along with notes on variable mapping and data collection procedures.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Best Overall Response",
+      "synonyms": [
+        "BOR",
+        "Best response",
+        "Best Overall Response (BOR)"
+      ],
+      "definition": "The best observed response recorded from the start of the study treatment until disease progression or recurrence, based on RECIST 1.1 criteria.",
+      "measurement": "Categorical assignment (CR, PR, SD, NON-CR/NON-PD, PD, NE) accumulated from response assessments over time.",
+      "time_window": null,
+      "assessment_rule": "Uses RECIST 1.1-defined categories, determined by investigator or independent assessor over all scheduled assessments up to progression or last evaluable assessment.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAMCD=BESTRESP",
+        "RSTESTCD=BESTRESP",
+        "RSORRES",
+        "RSSTRESC",
+        "RSDTC"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.95
+    },
+    {
+      "endpoint_name": "Overall Response",
+      "synonyms": [
+        "Overall Response by RECIST",
+        "OVRLRESP"
+      ],
+      "definition": "The response status at a given assessment defined by RECIST 1.1 criteria, including complete, partial, stable, progressive disease, or not evaluable.",
+      "measurement": "Categorical assessment at a specific time point (scan) using RECIST 1.1.",
+      "time_window": null,
+      "assessment_rule": "Determined at each scheduled assessment by pre-specified category (CR, PR, SD, NON-CR/NON-PD, PD, NE), may differ by evaluator (investigator/independent/radiologist).",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAMCD=OVRLRESP",
+        "RSTESTCD=OVRLRESP",
+        "RSORRES",
+        "RSSTRESC",
+        "RSDTC",
+        "RSEVAL"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.95
+    },
+    {
+      "endpoint_name": "Target Response",
+      "synonyms": [
+        "Target Lesion Response",
+        "TRGRESP"
+      ],
+      "definition": "The assessment of response in target lesions as defined by RECIST 1.1 at a given time point.",
+      "measurement": "Categorical result for target lesions only (CR, PR, SD, PD, NE, Not All Evaluated).",
+      "time_window": null,
+      "assessment_rule": "Based on RECIST 1.1 response criteria for all measurable target lesions by assessment date.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAMCD=TRGRESP",
+        "RSTESTCD=TRGRESP",
+        "RSORRES",
+        "RSSTRESC",
+        "RSDTC"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.9
+    },
+    {
+      "endpoint_name": "Non-target Response",
+      "synonyms": [
+        "Non-target Lesion Response",
+        "NTRGRESP"
+      ],
+      "definition": "The assessment of response in non-target lesions as per RECIST 1.1 at a given time point.",
+      "measurement": "Categorical result for non-target lesions (CR, NON-CR/NON-PD, PD, NE, Not All Evaluated).",
+      "time_window": null,
+      "assessment_rule": "Applied at each evaluation using RECIST 1.1 for all non-target lesions.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAMCD=NTRGRESP",
+        "RSTESTCD=NTRGRESP",
+        "RSORRES",
+        "RSSTRESC",
+        "RSDTC"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.9
+    },
+    {
+      "endpoint_name": "Symptomatic Deterioration",
+      "synonyms": [
+        "SYMPTDTR",
+        "Symptomatic Deterioration"
+      ],
+      "definition": "Assessment of new or worsening symptoms indicating disease progression.",
+      "measurement": "Yes/No assessment per time point.",
+      "time_window": null,
+      "assessment_rule": "Responder records if symptomatic deterioration is present; criteria likely protocol or trial-specific.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAMCD=SYMPTDTR",
+        "RSTESTCD=SYMPTDTR",
+        "RSORRES",
+        "RSSTRESC"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.85
+    }
+  ]
+}

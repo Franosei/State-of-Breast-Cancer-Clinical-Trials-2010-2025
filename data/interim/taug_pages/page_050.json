@@ -1,0 +1,53 @@
+{
+  "page_summary": "This page from the TAUG-BrCa discusses two key response-based endpoints in breast cancer trials: Duration of Response (DOR) and Best Overall Response (BOR). It defines how DOR is calculated for subjects achieving a response, describes possible variations, and outlines derivation considerations including the determination of response start date. The definition and ranking method for BOR is also described, including its calculation period and reliance on RECIST categories.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Duration of Response",
+      "synonyms": [
+        "DOR",
+        "duration of overall response"
+      ],
+      "definition": "The time from when RECIST criteria are first met for complete response (CR) or partial response (PR) until the first documented date of recurrent or progressive disease.",
+      "measurement": "Time from first achievement of CR or PR to objective documentation of recurrent or progressive disease.",
+      "time_window": null,
+      "assessment_rule": "Only subjects achieving CR or PR are included. The observation period starts at the date of first CR or PR after study start and ends at the first objective evidence of progression or recurrence.",
+      "population": "Subjects achieving CR or PR during treatment.",
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD",
+        "PARAM"
+      ],
+      "estimand_notes": "Population restricted to responders; event is progression or recurrence; variable is time-to-event.",
+      "quality_flags": null,
+      "confidence": 1.0
+    },
+    {
+      "endpoint_name": "Best Overall Response",
+      "synonyms": [
+        "BOR"
+      ],
+      "definition": "The best response recorded for a subject from the start of the trial until disease progression or treatment discontinuation, based on RECIST.",
+      "measurement": "Best RECIST category achieved before progression, death, or discontinuation.",
+      "time_window": null,
+      "assessment_rule": "Responses ranked as CR > PR > SD (or NON-CR/NON-PD for non-measurable disease) > PD. Best response is based on assessments until progression; does not consider assessments after progression or missing visits.",
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADRS"
+      ],
+      "cdisc_variables": [
+        "AVALC",
+        "PARAM",
+        "PARAMCD"
+      ],
+      "estimand_notes": "Summary measure is best achieved categorical RECIST response; population may be restricted to therapy period or all trial time.",
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

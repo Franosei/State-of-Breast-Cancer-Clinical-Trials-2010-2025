@@ -1,0 +1,126 @@
+{
+  "page_summary": "This page summarizes the settings and TAUG sections relevant for a range of breast cancer clinical trial endpoints, listing which stages of disease (neoadjuvant, adjuvant, advanced) and document sections describe data collection or analysis for endpoints such as pCR, EFS, DFS, OS, BOR, DOR, and PFS. It also notes that pathologic complete response (pCR) is not formally defined in the analysis section due to varying definitions between studies.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Pathologic Complete Response",
+      "synonyms": [
+        "pCR"
+      ],
+      "definition": "Pathologic complete response refers to the absence of invasive cancer in the breast and sampled lymph nodes following neoadjuvant therapy, as assessed by pathology.",
+      "measurement": "Assessment of tissue specimens after neoadjuvant treatment for residual invasive cancer.",
+      "time_window": null,
+      "assessment_rule": null,
+      "population": "Neoadjuvant breast cancer patients",
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": [
+        "binary endpoint"
+      ],
+      "confidence": 0.7
+    },
+    {
+      "endpoint_name": "Event-Free Survival",
+      "synonyms": [
+        "EFS"
+      ],
+      "definition": "Event-Free Survival is the time from randomization to the occurrence of a pre-specified event or death of any cause.",
+      "measurement": null,
+      "time_window": "Neoadjuvant setting",
+      "assessment_rule": null,
+      "population": "Neoadjuvant breast cancer patients",
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.7
+    },
+    {
+      "endpoint_name": "Disease-Free Survival",
+      "synonyms": [
+        "DFS"
+      ],
+      "definition": "Disease-Free Survival is the time from randomization until recurrence of disease or death.",
+      "measurement": null,
+      "time_window": "Adjuvant setting",
+      "assessment_rule": null,
+      "population": "Adjuvant breast cancer patients",
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.7
+    },
+    {
+      "endpoint_name": "Overall Survival",
+      "synonyms": [
+        "OS"
+      ],
+      "definition": "Overall Survival is the time from randomization until death from any cause.",
+      "measurement": null,
+      "time_window": "Neoadjuvant, Adjuvant, Advanced settings",
+      "assessment_rule": null,
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.9
+    },
+    {
+      "endpoint_name": "Best Overall Response",
+      "synonyms": [
+        "BOR"
+      ],
+      "definition": "Best Overall Response refers to the best observed response to therapy from start of treatment until disease progression or end of study.",
+      "measurement": null,
+      "time_window": "Advanced setting",
+      "assessment_rule": null,
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.8
+    },
+    {
+      "endpoint_name": "Duration of Response",
+      "synonyms": [
+        "DOR"
+      ],
+      "definition": "Duration of Response is the time from first documented response to therapy until documented disease progression or death.",
+      "measurement": null,
+      "time_window": "Advanced setting",
+      "assessment_rule": null,
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.8
+    },
+    {
+      "endpoint_name": "Progression-Free Survival",
+      "synonyms": [
+        "PFS"
+      ],
+      "definition": "Progression-Free Survival measures the time from randomization until disease progression or death.",
+      "measurement": null,
+      "time_window": "Advanced setting",
+      "assessment_rule": null,
+      "population": null,
+      "biomarker_related": "None",
+      "cdisc_domains": null,
+      "cdisc_variables": null,
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 0.8
+    }
+  ]
+}

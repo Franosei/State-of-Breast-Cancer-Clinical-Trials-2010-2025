@@ -1,0 +1,55 @@
+{
+  "page_summary": "This page discusses methodological considerations for endpoint analyses in breast cancer trials, focusing on modifications to endpoint derivation, sensitivity analyses, and potential issues related to interventions and missing visits. It specifically describes definitions and calculation methods for Event-Free Survival (EFS) in the neoadjuvant setting and Disease-Free Survival (DFS, also called Relapse-Free Survival or RFS) in the adjuvant setting, detailing the types of events considered for each and their respective assessment rules.",
+  "endpoint_candidates": [
+    {
+      "endpoint_name": "Event-Free Survival",
+      "synonyms": [
+        "EFS"
+      ],
+      "definition": "EFS measures the time from a start date until either death or disease progression that precludes surgery, including both local and distant recurrence.",
+      "measurement": "Length of time from a start date to death or progression of disease preventing surgery.",
+      "time_window": null,
+      "assessment_rule": "Events include death and both local or distant disease recurrence; progression prior to surgery is included as an event. Censoring and start date follow the same rules as for PFS.",
+      "population": "Neoadjuvant breast cancer population.",
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD",
+        "PARAM"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 1.0
+    },
+    {
+      "endpoint_name": "Disease-Free Survival",
+      "synonyms": [
+        "DFS",
+        "Relapse-Free Survival",
+        "RFS"
+      ],
+      "definition": "DFS measures the length of time after removal of the primary tumor and lymph nodes during which a patient survives without any evidence of disease recurrence or death.",
+      "measurement": "Time from a start date (following surgery) to any disease recurrence or death.",
+      "time_window": null,
+      "assessment_rule": "Events are date of death or date of any disease recurrence; no interventions should affect DFS determination. Methods follow PFS rules for start date and censoring.",
+      "population": "Adjuvant breast cancer population.",
+      "biomarker_related": "None",
+      "cdisc_domains": [
+        "ADTTE"
+      ],
+      "cdisc_variables": [
+        "AVAL",
+        "CNSR",
+        "PARAMCD",
+        "PARAM"
+      ],
+      "estimand_notes": null,
+      "quality_flags": null,
+      "confidence": 1.0
+    }
+  ]
+}

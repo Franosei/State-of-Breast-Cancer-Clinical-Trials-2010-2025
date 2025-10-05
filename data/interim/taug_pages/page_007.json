@@ -1,0 +1,4 @@
+{
+  "page_summary": "This page outlines known issues and modeling considerations in the development of the Breast Cancer TAUG, including deferred CRFs, the use of non-standard variables (NSVs), challenges in representing treatment regimens, radiation location categorization, the complexity of capturing line of therapy, future plans for including scoring systems, and ongoing discussions regarding the modeling of the 'Best Overall Response' variable. It highlights areas currently lacking finalized standards or precise endpoint definitions.",
+  "endpoint_candidates": []
+}
