@@ -1,0 +1,10 @@
+Key stats:
+- Years covered: 2010–2025
+
+Recent window (last 2 years: 2024–2025):
+- Trial starts (sum): 1694
+- % with posted results (expected low due to lag): 0.1%
+
+Latest mature year (before recent window): 2023
+- Trial starts: 960
+- % with posted results: 0.7%

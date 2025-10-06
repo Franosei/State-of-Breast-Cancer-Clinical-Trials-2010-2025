@@ -1,0 +1,17 @@
+Cohort: HER2 (n=1664) vs Overall (n=8915)
+- % with posted results (all trials): 16.5%  | Overall: 10.9%
+- Mean CONSORT results score (0–7): 1.63  | Overall: 1.41
+Endpoint-level:
+  • Pathologic_Complete_Response_pCR: planned% HER2=10.5% (lift 2.54× vs overall 4.1%), reported% HER2=15.8% vs overall 14.0%
+  • Objective_Response_Rate: planned% HER2=13.9% (lift 1.86× vs overall 7.5%), reported% HER2=18.4% vs overall 19.6%
+  • Progression_Free_Survival: planned% HER2=25.9% (lift 2.77× vs overall 9.3%), reported% HER2=24.1% vs overall 21.4%
+  • Overall_Survival: planned% HER2=57.3% (lift 1.21× vs overall 47.4%), reported% HER2=23.5% vs overall 16.3%
+
+Cohort: BRCAm (n=71) vs Overall (n=8915)
+- % with posted results (all trials): 23.9%  | Overall: 10.9%
+- Mean CONSORT results score (0–7): 1.92  | Overall: 1.41
+Endpoint-level:
+  • Pathologic_Complete_Response_pCR: planned% BRCAm=2.8% (lift 0.68× vs overall 4.1%), reported% BRCAm=50.0% vs overall 14.0%
+  • Objective_Response_Rate: planned% BRCAm=9.9% (lift 1.31× vs overall 7.5%), reported% BRCAm=57.1% vs overall 19.6%
+  • Progression_Free_Survival: planned% BRCAm=16.9% (lift 1.81× vs overall 9.3%), reported% BRCAm=60.0% vs overall 21.4%
+  • Overall_Survival: planned% BRCAm=56.3% (lift 1.19× vs overall 47.4%), reported% BRCAm=33.3% vs overall 16.3%

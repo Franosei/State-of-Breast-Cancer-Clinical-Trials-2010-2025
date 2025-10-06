@@ -1,0 +1,20 @@
+Geography summary
+Total trials: 8915
+Distribution (sites per trial):
+- p95 ≈ 45, p99 ≈ 268, max = 1574
+
+Scale over time (selected years):
+ start_year  trials  median_sites  p90_sites
+     2018.0     729           1.0       17.0
+     2019.0     838           1.0       14.0
+     2020.0     801           1.0       18.0
+     2021.0     934           1.0       15.0
+     2022.0     948           1.0       13.0
+     2023.0     960           1.0       14.0
+     2024.0     964           1.0        9.0
+     2025.0     730           1.0        8.0
+
+Transparency by footprint:
+         label    n results_pct  consort_mean
+Single-country 7965         8.7      1.328939
+ Multi-country  950        28.8      2.130526

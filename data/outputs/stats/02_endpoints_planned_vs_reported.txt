@@ -1,0 +1,16 @@
+Endpoint planned vs reported (counts & %):
+- Overall_Survival: planned=4224, reported=568, reported%=13.4
+- Progression_Free_Survival: planned=833, reported=145, reported%=17.4
+- Objective_Response_Rate: planned=670, reported=107, reported%=16.0
+- Disease_Free_Survival: planned=531, reported=39, reported%=7.3
+- Pathologic_Complete_Response_pCR: planned=369, reported=39, reported%=10.6
+- Pathologic_Complete_Response: planned=262, reported=39, reported%=14.9
+- Duration_of_Response: planned=202, reported=32, reported%=15.8
+- Event_Free_Survival: planned=171, reported=17, reported%=9.9
+- Best_Overall_Response: planned=166, reported=31, reported%=18.7
+- Disease_Recurrence: planned=81, reported=7, reported%=8.6
+- Overall_Response: planned=80, reported=16, reported%=20.0
+- Time_to_Progression: planned=22, reported=6, reported%=27.3
+- Symptomatic_Deterioration: planned=3, reported=1, reported%=33.3
+- Target_Response: planned=2, reported=0, reported%=0.0
+- Non_target_Response: planned=0, reported=0, reported%=0.0

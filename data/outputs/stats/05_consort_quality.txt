@@ -1,0 +1,41 @@
+CONSORT reporting rates by phase (posted results only):
+
+Phase: NA/Other (n=251)
+- consort_participant_flow: 100.0%
+- consort_recruitment: 100.0%
+- consort_baseline: 100.0%
+- consort_outcomes_estimation: 78.1%
+- consort_ancillary_analyses: 6.4%
+- consort_harms: 100.0%
+
+Phase: Other (n=19)
+- consort_participant_flow: 100.0%
+- consort_recruitment: 100.0%
+- consort_baseline: 100.0%
+- consort_outcomes_estimation: 68.4%
+- consort_ancillary_analyses: 5.3%
+- consort_harms: 100.0%
+
+Phase: Phase 1 (n=113)
+- consort_participant_flow: 100.0%
+- consort_recruitment: 100.0%
+- consort_baseline: 100.0%
+- consort_outcomes_estimation: 80.5%
+- consort_ancillary_analyses: 0.0%
+- consort_harms: 100.0%
+
+Phase: Phase 2 (n=455)
+- consort_participant_flow: 100.0%
+- consort_recruitment: 100.0%
+- consort_baseline: 100.0%
+- consort_outcomes_estimation: 74.5%
+- consort_ancillary_analyses: 2.4%
+- consort_harms: 100.0%
+
+Phase: Phase 3 (n=131)
+- consort_participant_flow: 100.0%
+- consort_recruitment: 100.0%
+- consort_baseline: 100.0%
+- consort_outcomes_estimation: 87.0%
+- consort_ancillary_analyses: 4.6%
+- consort_harms: 100.0%

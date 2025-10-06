@@ -1,0 +1,5 @@
+NM vs EI summary (cohort sizes, % with results, % with gap):
+     cohort    n  results_pct   gap_pct
+       NM=1 1895    15.778364 71.081794
+       EI=1 3486    12.335055 63.625932
+NM=0 & EI=0 3542     6.804065 42.828910
