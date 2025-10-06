@@ -28,7 +28,7 @@ def main():
     ax_t.legend(loc="upper left")
     save_fig(fig_trend, "03_nm_vs_ei_trend.png")
 
-    # ---------- COHORTS: results & gaps (side-by-side) ----------
+    # COHORTS: results & gaps (side-by-side)
     cohorts = [
         ("NM=1", df["NM_new_medicine"] == 1),
         ("EI=1", df["EI_extension_of_indication"] == 1),

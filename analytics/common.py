@@ -8,7 +8,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from typing import Tuple, Dict
 
-# ----------- IO & paths -----------
+# IO & paths 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 PROC_DIR = os.path.join(DATA_DIR, "processed")
@@ -35,7 +35,7 @@ def save_stats(text: str, filename: str):
     with open(os.path.join(STATS_DIR, filename), "w", encoding="utf-8") as f:
         f.write(text.strip() + "\n")
 
-# ----------- Plot style (consistent across all) -----------
+# Plot style (consistent across all)
 # Neutral palette with high contrast.
 PALETTE = {
     "primary": "#1f77b4",   # blue
@@ -73,7 +73,7 @@ def pct(n, d) -> float:
     if d == 0: return 0.0
     return 100.0 * n / d
 
-# ----------- Common derived fields -----------
+# Common derived fields
 def add_derived(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
     # has_posted_results: already present? if not, derive from results_outcome_measures

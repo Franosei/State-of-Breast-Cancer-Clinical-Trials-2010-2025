@@ -18,7 +18,7 @@ def main():
     r = r[r["start_year"].notna()].sort_values("start_year")
     r["results_pct"] = 100 * r["has_results"]
 
-    # --- define recent window & mature window years ---
+    # define recent window & mature window years
     if not g.empty:
         min_year = int(g["start_year"].min())
         max_year = int(g["start_year"].max())
@@ -55,7 +55,7 @@ def main():
 
     save_fig(fig, "01_momentum_transparency.png")
 
-    # ----- stats text -----
+    # stats text
     # recent window (e.g., 2024–2025)
     if recent_start is not None:
         recent_mask_g = g["start_year"] >= recent_start

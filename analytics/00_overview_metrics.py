@@ -13,7 +13,7 @@ def main():
     df = add_derived(load_enhanced())
     n_total = len(df)
 
-    # --- Phase breakdown ---
+    # Phase breakdown
     # Normalise phase strings
     def clean_phase(ph):
         if pd.isna(ph):
@@ -37,7 +37,7 @@ def main():
     phase_counts = df["phase_clean"].value_counts(dropna=False).sort_index()
     phase_pct = 100 * phase_counts / n_total
 
-    # --- Sponsor breakdown ---
+    # Sponsor breakdown 
     # Simplify sponsor classification
     def classify_sponsor(s):
         if pd.isna(s):
@@ -55,7 +55,7 @@ def main():
     sponsor_counts = df["sponsor_class_auto"].value_counts(dropna=False)
     sponsor_pct = 100 * sponsor_counts / n_total
 
-    # --- Trial momentum ---
+    # Trial momentum 
     trials_by_year = (
         df.groupby("start_year")["nct_id"]
         .count()
@@ -65,7 +65,7 @@ def main():
     earliest = int(df["start_year"].min()) if df["start_year"].notna().any() else None
     latest = int(df["start_year"].max()) if df["start_year"].notna().any() else None
 
-    # --- Summary text ---
+    # Summary text
     txt = f"""
 Breast Cancer Clinical Trials: Overview (2010–2025)
 

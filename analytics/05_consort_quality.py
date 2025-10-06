@@ -51,7 +51,7 @@ def main():
     plt.tight_layout()
     save_fig(fig, "05_consort_reporting_by_phase.png")
 
-    # --- Save statistics text summary ---
+    # Save statistics text summary
     lines = ["CONSORT reporting rates by phase (posted results only):"]
     for phase, sub in posted.groupby("phase_bucket"):
         r = (sub[CONSORT_FLAGS].mean() * 100).round(1)

@@ -12,7 +12,7 @@ def main():
     sc = df["site_count"].astype("float").dropna()
     n_total = len(df)
 
-    # ---------- Panel 1: capped distribution ----------
+    # Panel 1: capped distribution
     if len(sc) > 0:
         p95 = float(sc.quantile(0.95))
         p99 = float(sc.quantile(0.99))
@@ -39,7 +39,7 @@ def main():
     else:
         p95 = p99 = smax = 0
 
-    # ---------- Panel 2: scaling over time (median & 90th pct) ----------
+    # Panel 2: scaling over time (median & 90th pct)
     df_time = df[df["start_year"].notna()].copy()
     if not df_time.empty:
         yearly = (df_time.groupby("start_year")
@@ -62,7 +62,7 @@ def main():
     else:
         yearly = pd.DataFrame(columns=["start_year", "median_sites", "p90_sites", "trials"])
 
-    # ---------- Panel 3: transparency by geography footprint ----------
+    # Panel 3: transparency by geography footprint 
     # side-by-side bars for Single vs Multi: % with results and mean CONSORT score
     geo = (df.groupby("multi_country_flag")
              .agg(results_pct=("has_results", lambda x: 100 * np.nanmean(x)),
@@ -94,7 +94,7 @@ def main():
     ax3.legend(lines + lines2, labels + labels2, loc="upper left")
     save_fig(fig3, "06c_transparency_single_vs_multi.png")
 
-    # ---------- Stats text ----------
+    # Stats text
     txt = f"""Geography summary
 Total trials: {n_total}
 Distribution (sites per trial):
