@@ -15,7 +15,7 @@ class OpenAIClient:
         from openai import OpenAI
         self._client = OpenAI(api_key=key)
 
-    # --------- Layer A fallback ----------
+    # Layer A fallback
     def classify_endpoint(self, outcome_text: str, label_set: List[str]) -> Optional[str]:
         sys = (
             "You map a clinical trial outcome string to EXACTLY ONE endpoint label from the provided list "
@@ -38,7 +38,7 @@ class OpenAIClient:
         except Exception:
             return None
 
-    # --------- Layer C adjudicator ----------
+    # Layer C adjudicator
     def classify_nm_ei(self, text: str) -> Dict[str, Any]:
         sys = (
             "Classify if a trial text indicates a New Medicine (NM) and/or an Extension of Indication (EI). "
