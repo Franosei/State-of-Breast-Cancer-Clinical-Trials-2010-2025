@@ -49,21 +49,21 @@ def annotate_reporting_for_row(
     """Compute the reporting gap flag and CONSORT 7 results flags."""
     res: Dict[str, Any] = {}
 
-    # --- planned canonical set (from Layer A flags already on row) ---
+    # planned canonical set (from Layer A flags already on row)
     planned = set()
     for cname in resources.canonical:
         col = canonical_to_col(cname)
         if int(row.get(col, 0)) == 1:
             planned.add(cname)
 
-    # --- reported canonical set ---
+    # reported canonical set
     titles = _collect_reported_endpoint_titles(row.get("results_outcome_measures"))
     reported = set(_map_reported_to_canonical(titles, resources, client))
 
-    # --- Reporting gap flag ---
+    # Reporting gap flag
     res["reporting_gap_flag"] = 1 if any(p not in reported for p in planned) else 0
 
-    # --- CONSORT Results (7 flags) ---
+    # CONSORT Results (7 flags)
     # 13a/13b participant flow -> results_participant_flow non-empty structure
     res["consort_participant_flow"] = 1 if _json_or_none(row.get("results_participant_flow")) else 0
 
