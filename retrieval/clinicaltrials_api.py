@@ -8,7 +8,7 @@ from typing import Optional, List, Dict, Any
 from config.settings import CLINICAL_TRIALS_BASE_URL, RAW_DATA_DIR
 
 
-# ---------------- HTTP helper ----------------
+# HTTP helper
 def _http_get_json(
     url: str,
     params: Dict[str, Any],
@@ -47,7 +47,7 @@ def _http_get_json(
         resp.raise_for_status()
 
 
-# ---------------- Small JSON helpers ----------------
+# Small JSON helpers
 def _jdump(obj: Any) -> str:
     """CSV-safe JSON serialization (None -> empty string)."""
     if obj is None:
@@ -55,7 +55,7 @@ def _jdump(obj: Any) -> str:
     return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
 
 
-# ---------------- Results extractors (compact, CSV-safe) ----------------
+# Results extractors (compact, CSV-safe)
 def _extract_outcome_measures(results: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
     om = (results or {}).get("outcomeMeasuresModule") or {}
     measures = om.get("outcomeMeasures") or []
@@ -171,7 +171,7 @@ def _extract_adverse_events(results: Dict[str, Any]) -> Optional[List[Dict[str, 
     return out
 
 
-# ---------------- Field & site extractors ----------------
+# Field & site extractors
 def _extract_trial_fields(study: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     protocol = study.get("protocolSection", {}) or {}
     ident = protocol.get("identificationModule", {}) or {}
@@ -271,7 +271,7 @@ def _extract_sites(study: Dict[str, Any]) -> List[Dict[str, Any]]:
     return rows
 
 
-# ---------------- Main fetch (ONE CSV, UNIQUE nct_id) ----------------
+# Main fetch (ONE CSV, UNIQUE nct_id) 
 def fetch_breast_cancer_trials(
     start_year: Optional[int] = 2010,
     end_year: Optional[int] = 2025,
