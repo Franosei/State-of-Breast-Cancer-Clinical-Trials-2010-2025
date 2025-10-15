@@ -1,41 +1,50 @@
-CONSORT reporting rates by phase (posted results only):
+CONSORT reporting quality (ELIGIBLE trials only; percentages among those with posted results)
 
-Phase: NA/Other (n=251)
-- consort_participant_flow: 100.0%
-- consort_recruitment: 100.0%
-- consort_baseline: 100.0%
-- consort_outcomes_estimation: 78.1%
-- consort_ancillary_analyses: 6.4%
-- consort_harms: 100.0%
+Phase: Phase 1 — eligible n=615, posted n=111, % posted=18.0%
+Phase: Phase 2 — eligible n=1029, posted n=444, % posted=43.1%
+Phase: Phase 3 — eligible n=310, posted n=130, % posted=41.9%
+Phase: Phase 4 — eligible n=0, posted n=0, % posted=nan%
+Phase: Other — eligible n=76, posted n=17, % posted=22.4%
+Phase: NA/Other — eligible n=2702, posted n=245, % posted=9.1%
 
-Phase: Other (n=19)
-- consort_participant_flow: 100.0%
-- consort_recruitment: 100.0%
-- consort_baseline: 100.0%
-- consort_outcomes_estimation: 68.4%
-- consort_ancillary_analyses: 5.3%
-- consort_harms: 100.0%
+Item-level completeness per phase (%, among eligible & posted):
 
-Phase: Phase 1 (n=113)
-- consort_participant_flow: 100.0%
-- consort_recruitment: 100.0%
-- consort_baseline: 100.0%
-- consort_outcomes_estimation: 80.5%
-- consort_ancillary_analyses: 0.0%
-- consort_harms: 100.0%
+Phase 1:
+- Participant Flow: 100.0%
+- Recruitment: 100.0%
+- Baseline: 100.0%
+- Outcomes Estimation: 81.1%
+- Ancillary Analyses: 0.0%
+- Harms: 100.0%
 
-Phase: Phase 2 (n=455)
-- consort_participant_flow: 100.0%
-- consort_recruitment: 100.0%
-- consort_baseline: 100.0%
-- consort_outcomes_estimation: 74.5%
-- consort_ancillary_analyses: 2.4%
-- consort_harms: 100.0%
+Phase 2:
+- Participant Flow: 100.0%
+- Recruitment: 100.0%
+- Baseline: 100.0%
+- Outcomes Estimation: 74.3%
+- Ancillary Analyses: 2.5%
+- Harms: 100.0%
 
-Phase: Phase 3 (n=131)
-- consort_participant_flow: 100.0%
-- consort_recruitment: 100.0%
-- consort_baseline: 100.0%
-- consort_outcomes_estimation: 87.0%
-- consort_ancillary_analyses: 4.6%
-- consort_harms: 100.0%
+Phase 3:
+- Participant Flow: 100.0%
+- Recruitment: 100.0%
+- Baseline: 100.0%
+- Outcomes Estimation: 87.7%
+- Ancillary Analyses: 3.8%
+- Harms: 100.0%
+
+Other:
+- Participant Flow: 100.0%
+- Recruitment: 100.0%
+- Baseline: 100.0%
+- Outcomes Estimation: 64.7%
+- Ancillary Analyses: 5.9%
+- Harms: 100.0%
+
+NA/Other:
+- Participant Flow: 100.0%
+- Recruitment: 100.0%
+- Baseline: 100.0%
+- Outcomes Estimation: 78.0%
+- Ancillary Analyses: 6.5%
+- Harms: 100.0%

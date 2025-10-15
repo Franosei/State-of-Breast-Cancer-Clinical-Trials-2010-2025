@@ -1,9 +1,11 @@
-Geography summary
-Total trials: 8915
-Distribution (sites per trial):
+Geography summary (aligned with policy = PCD + 12 months where relevant)
+
+Total trials: 8,915
+
+Sites per trial (all trials):
 - p95 ≈ 45, p99 ≈ 268, max = 1574
 
-Scale over time (selected years):
+Scale over time (last 8 rows):
  start_year  trials  median_sites  p90_sites
      2018.0     729           1.0       17.0
      2019.0     838           1.0       14.0
@@ -14,7 +16,7 @@ Scale over time (selected years):
      2024.0     964           1.0        9.0
      2025.0     730           1.0        8.0
 
-Transparency by footprint:
-         label    n results_pct  consort_mean
-Single-country 7965         8.7      1.328939
- Multi-country  950        28.8      2.130526
+Transparency by footprint (ELIGIBLE only):
+        cohort    n  eligible % reported (eligible) % overdue (eligible) CONSORT mean (reported-eligible)
+Single-country 7965      4223                 16.0%                84.0%                             4.77
+ Multi-country  950       509                 53.4%                46.6%                             4.92
