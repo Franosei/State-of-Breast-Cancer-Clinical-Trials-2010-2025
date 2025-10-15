@@ -1,10 +1,30 @@
-Key stats:
+Key policy: Results are due 12 months after the Primary Completion Date (PCD).
+Using results date source: last_update_date (proxy)
+
+Coverage:
 - Years covered: 2010–2025
 
-Recent window (last 2 years: 2024–2025):
-- Trial starts (sum): 1694
-- % with posted results (expected low due to lag): 0.1%
 
-Latest mature year (before recent window): 2023
-- Trial starts: 960
-- % with posted results: 0.7%
+OVERALL (all start years)
+- Total trials: 8,915
+- Eligible to report (PCD+12mo): 4,732
+- Reported (eligible): 947  | Overdue (eligible, no results): 3,785
+- % of ALL trials reported (eligible): 10.6%  | Overdue: 42.5%
+
+Among eligible that REPORTED:
+- On-time: 80 (1.7% of eligible; 8.4% of reported-eligible)
+- Late/Unknown date: 867 (18.3% of eligible; 91.6% of reported-eligible)
+
+
+SINCE 2020 (start_year ≥ 2020)
+- Total trials: 5,337
+- Eligible to report (PCD+12mo): 1,867
+- Reported (eligible): 177  | Overdue (eligible, no results): 1,690
+- % of ALL trials reported (eligible): 3.3%  | Overdue: 31.7%
+
+Among eligible that REPORTED:
+- On-time: 21 (1.1% of eligible; 11.9% of reported-eligible)
+- Late/Unknown date: 156 (8.4% of eligible; 88.1% of reported-eligible)
+
+RECENT window (last 2 years: 2024–2025)
+- Avg % reported of ALL: 0.1% | Avg % overdue of ALL: 3.3%

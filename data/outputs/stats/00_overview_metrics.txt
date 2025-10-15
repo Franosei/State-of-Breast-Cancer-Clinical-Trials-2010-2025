@@ -1,35 +1,54 @@
 Breast Cancer Clinical Trials: Overview (2010–2025)
 
 Total registered trials analysed: 8,915
-Years covered: 2010–2025
+Years covered (by start_year): 2010–2025
 
-Phase distribution:
-              Count     %
-phase_clean              
-Phase I        1038  11.6
-Phase I/II      488   5.5
-Phase II       1595  17.9
-Phase II/III     66   0.7
-Phase III       601   6.7
-Phase IV        149   1.7
-Unspecified    4978  55.8
+Status distribution (data-driven from overall_status):
+                         Count     %
+overall_status                      
+Completed                 3009  33.8
+Recruiting                2361  26.5
+Unknown                   1141  12.8
+Active Not Recruiting     1010  11.3
+Terminated                 580   6.5
+Not Yet Recruiting         483   5.4
+Withdrawn                  184   2.1
+Enrolling By Invitation    101   1.1
+Suspended                   46   0.5
 
-Sponsor distribution:
-                    Count     %
-sponsor_class_auto             
-Academic             5148  57.7
-Other                2819  31.6
-Industry              914  10.3
-Government             34   0.4
+Phase distribution (data-driven from phase):
+                Count     %
+phase                      
+Unspecified      4978  55.8
+Phase2           1595  17.9
+Phase1            904  10.1
+Phase3            601   6.7
+Phase1; Phase2    488   5.5
+Phase4            149   1.7
+Early Phase1      134   1.5
+Phase2; Phase3     66   0.7
+
+Sponsor distribution (data-driven from sponsor_class):
+               Count     %
+sponsor_class             
+Other           6590  73.9
+Industry        1883  21.1
+Other Gov        214   2.4
+Nih              137   1.5
+Network           81   0.9
+Fed                6   0.1
+Unknown            3   0.0
+Indiv              1   0.0
 
 Trial starts by year (last 5 shown):
  start_year  trial_count
-     2021.0          934
-     2022.0          948
-     2023.0          960
-     2024.0          964
-     2025.0          730
+       2021          934
+       2022          948
+       2023          960
+       2024          964
+       2025          730
 
-Note:
-Phases inferred from free-text labels (e.g., 'PHASE1; PHASE2' → 'Phase I/II').
-Sponsor categories automatically derived by pattern matching of sponsor names.
+Notes:
+• No hard-coded category lists. Values are taken directly from your columns and lightly normalized (case/spacing only).
+• Combined labels (e.g., "PHASE1; PHASE2") are preserved as combined categories (no manual roll-ups).
+• To change grouping (e.g., roll Phase I/II together), do that upstream when creating the columns themselves.
