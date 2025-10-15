@@ -1,16 +1,27 @@
-Endpoint planned vs reported (counts & %):
-- Overall_Survival: planned=4224, reported=568, reported%=13.4
-- Progression_Free_Survival: planned=833, reported=145, reported%=17.4
-- Objective_Response_Rate: planned=670, reported=107, reported%=16.0
-- Disease_Free_Survival: planned=531, reported=39, reported%=7.3
-- Pathologic_Complete_Response_pCR: planned=369, reported=39, reported%=10.6
-- Pathologic_Complete_Response: planned=262, reported=39, reported%=14.9
-- Duration_of_Response: planned=202, reported=32, reported%=15.8
-- Event_Free_Survival: planned=171, reported=17, reported%=9.9
-- Best_Overall_Response: planned=166, reported=31, reported%=18.7
-- Disease_Recurrence: planned=81, reported=7, reported%=8.6
-- Overall_Response: planned=80, reported=16, reported%=20.0
-- Time_to_Progression: planned=22, reported=6, reported%=27.3
-- Symptomatic_Deterioration: planned=3, reported=1, reported%=33.3
-- Target_Response: planned=2, reported=0, reported%=0.0
-- Non_target_Response: planned=0, reported=0, reported%=0.0
+Endpoints analysis (eligible trials only; policy = PCD + 12 months):
+- Eligible trials (should have reported): 4,732
+- Eligible trials WITH results: 947
+
+Per-endpoint (counts within eligible trials that PLANNED the endpoint):
+- Overall Survival: planned=2204, reported w/ endpoint=554 (25.1% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Progression Free Survival: planned=445, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=145 (32.6% of planned)
+- Objective Response Rate: planned=354, reported w/ endpoint=106 (29.9% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Pathologic Complete Response pCR: planned=174, reported w/ endpoint=4 (2.3% of planned), reported but MISSING planned endpoint=33 (19.0% of planned)
+- Disease Free Survival: planned=170, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=36 (21.2% of planned)
+- Pathologic Complete Response: planned=108, reported w/ endpoint=36 (33.3% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Duration Of Response: planned=104, reported w/ endpoint=32 (30.8% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Best Overall Response: planned=100, reported w/ endpoint=31 (31.0% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Event Free Survival: planned=75, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=17 (22.7% of planned)
+- Overall Response: planned=46, reported w/ endpoint=16 (34.8% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Disease Recurrence: planned=37, reported w/ endpoint=7 (18.9% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Time To Progression: planned=16, reported w/ endpoint=5 (31.2% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Target Response: planned=2, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Symptomatic Deterioration: planned=2, reported w/ endpoint=1 (50.0% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Non Target Response: planned=0, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+
+Overall across endpoints (eligible & planned): planned=3,837, reported w/ endpoint=792 (20.6%), reported but MISSING planned endpoint=231 (6.0%)
+
+Notes:
+• Entire analysis is restricted to trials that have reached Primary Completion Date + 12 months.
+• Endpoint presence is inferred from `detected_endpoint_names` by matching names to each endpoint label.
+• If you maintain a canonical mapping from ENDPOINT_COLS → reported endpoint labels, add it to improve matching.

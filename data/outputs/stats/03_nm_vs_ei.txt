@@ -1,5 +1,4 @@
-NM vs EI summary (cohort sizes, % with results, % with gap):
-     cohort    n  results_pct   gap_pct
-       NM=1 1895    15.778364 71.081794
-       EI=1 3486    12.335055 63.625932
-NM=0 & EI=0 3542     6.804065 42.828910
+NM vs EI reporting gap (policy = PCD + 12 months):
+- NM = 1: total n=1895, eligible n=974 | reported (eligible)=293 (30.1%), overdue (eligible)=681 (69.9%)
+- EI = 1: total n=3486, eligible n=1778 | reported (eligible)=419 (23.6%), overdue (eligible)=1359 (76.4%)
+- NM = 0 & EI = 0: total n=3542, eligible n=1983 | reported (eligible)=236 (11.9%), overdue (eligible)=1747 (88.1%)
