@@ -1,9 +1,9 @@
 Endpoints analysis (eligible trials only; policy = PCD + 12 months):
-- Eligible trials (should have reported): 4,732
+- Eligible trials (should have reported): 4,733
 - Eligible trials WITH results: 947
 
 Per-endpoint (counts within eligible trials that PLANNED the endpoint):
-- Overall Survival: planned=2204, reported w/ endpoint=554 (25.1% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
+- Overall Survival: planned=2205, reported w/ endpoint=554 (25.1% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
 - Progression Free Survival: planned=445, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=145 (32.6% of planned)
 - Objective Response Rate: planned=354, reported w/ endpoint=106 (29.9% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
 - Pathologic Complete Response pCR: planned=174, reported w/ endpoint=4 (2.3% of planned), reported but MISSING planned endpoint=33 (19.0% of planned)
@@ -19,7 +19,7 @@ Per-endpoint (counts within eligible trials that PLANNED the endpoint):
 - Symptomatic Deterioration: planned=2, reported w/ endpoint=1 (50.0% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
 - Non Target Response: planned=0, reported w/ endpoint=0 (0.0% of planned), reported but MISSING planned endpoint=0 (0.0% of planned)
 
-Overall across endpoints (eligible & planned): planned=3,837, reported w/ endpoint=792 (20.6%), reported but MISSING planned endpoint=231 (6.0%)
+Overall across endpoints (eligible & planned): planned=3,838, reported w/ endpoint=792 (20.6%), reported but MISSING planned endpoint=231 (6.0%)
 
 Notes:
 • Entire analysis is restricted to trials that have reached Primary Completion Date + 12 months.
