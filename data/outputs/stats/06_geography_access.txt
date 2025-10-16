@@ -17,6 +17,6 @@ Scale over time (last 8 rows):
      2025.0     730           1.0        8.0
 
 Transparency by footprint (ELIGIBLE only):
-        cohort    n  eligible % reported (eligible) % overdue (eligible) CONSORT mean (reported-eligible)
-Single-country 7965      4223                 16.0%                84.0%                             4.77
- Multi-country  950       509                 53.4%                46.6%                             4.92
+        cohort    n  eligible % reported (eligible)  pct_overdue_eligible CONSORT mean (reported-eligible)
+Single-country 7965      4223                 16.0%             84.016102                             4.77
+ Multi-country  950       509                 53.4%             46.561886                             4.92

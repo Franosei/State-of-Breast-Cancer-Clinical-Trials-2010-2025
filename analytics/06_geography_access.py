@@ -126,8 +126,9 @@ def main():
 
     geo = pd.DataFrame(cohorts)
 
-    x = np.arange(len(geo))
+    # === CHANGED: keep bars within a group close, add space between groups ===
     w = 0.34
+    x = np.arange(len(geo)) * (w * 3 + 0.5)  # add inter-group spacing while keeping triplets tight
 
     c_reported = PALETTE.get("primary", "#1f77b4")
     c_overdue  = PALETTE.get("danger",  "#d62728")
@@ -183,7 +184,7 @@ Scale over time (last 8 rows):
 Transparency by footprint (ELIGIBLE only):
 {geo[['label','n_all','n_eligible','pct_reported_eligible','pct_overdue_eligible','mean_consort_reported']]
     .rename(columns={'label':'cohort','n_all':'n','n_eligible':'eligible','pct_reported_eligible':'% reported (eligible)',
-                     'pct_overdue_eligible':'% overdue (eligible)','mean_consort_reported':'CONSORT mean (reported-eligible)'})
+                     '% overdue (eligible)':'% overdue (eligible)','mean_consort_reported':'CONSORT mean (reported-eligible)'})
     .to_string(index=False, formatters={'% reported (eligible)': _fmt_pct, '% overdue (eligible)': _fmt_pct,
                                         'CONSORT mean (reported-eligible)': (lambda v: "NA" if pd.isna(v) else f"{v:.2f}")})}
 """
